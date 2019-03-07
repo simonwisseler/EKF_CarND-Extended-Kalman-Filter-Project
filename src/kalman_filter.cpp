@@ -9,20 +9,11 @@ using Eigen::VectorXd;
  * Please note that the Eigen library does not initialize 
  *   VectorXd or MatrixXd objects with zeros upon creation.
  */
-
 KalmanFilter::KalmanFilter() {}
+
 
 KalmanFilter::~KalmanFilter() {}
 
-void KalmanFilter::Init(VectorXd &x_in, MatrixXd &P_in, MatrixXd &F_in,
-                        MatrixXd &Q_in, MatrixXd &H_in, MatrixXd &R_in) {
-    x_ = x_in;
-    P_ = P_in;
-    F_ = F_in;
-    Q_ = Q_in;
-    H_ = H_in;
-    R_ = R_in;
-}
 
 void KalmanFilter::Predict() {
     /**
@@ -32,6 +23,7 @@ void KalmanFilter::Predict() {
     MatrixXd F_t = F_.transpose();
     P_ = F_*P_*F_t + Q_;
 }
+
 
 void KalmanFilter::Update(const VectorXd &z) {
     MatrixXd H_t = H_.transpose();
@@ -46,6 +38,7 @@ void KalmanFilter::Update(const VectorXd &z) {
     MatrixXd I = MatrixXd::Identity(4,4);
     P_ = (I - K*H_)*P_;
 }
+
 
 void KalmanFilter::UpdateEKF(const VectorXd &z) {
     MatrixXd H_t = H_.transpose();

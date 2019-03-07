@@ -1,3 +1,9 @@
+-----
+This repo contains a simple implementation of the Extended Kalman Filter algorithm for vehicle localization built on Udacity's Self-Driving Car Nanodegree Extended-Kalman-Filter Project.
+
+The description below comes from the original repo (https://github.com/udacity/CarND-Extended-Kalman-Filter-Project.git).
+
+-----
 # Extended Kalman Filter Project Starter Code
 Self-Driving Car Engineer Nanodegree Program
 

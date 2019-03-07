@@ -25,7 +25,7 @@ VectorXd Tools::CalculateRMSE(const vector<VectorXd> &estimations,
     return rmse;
 }
 
-MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
+MatrixXd Tools::CalculateJacobian(const VectorXd &x_state) {
     /**
      * Jacobian used to calculate predicted radar measurements - first-order Taylor expansion
      * required to map state x from Cartesian coordinates px, py, vx, vy to Polar coordinates rho, phi, rho_dot
@@ -47,7 +47,7 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
         std::cout << "Error: Division by 0 in Tools::CalculateJacobian" << std::endl;
         return Hj;
     }
-    float rho = std::sqrt(px*px+py*py);
+    float rho = sqrt(px*px+py*py);
     float rho_squared = rho*rho;
     float rho_cubed = rho_squared*rho;
     Hj << px/rho, py/rho, 0, 0,

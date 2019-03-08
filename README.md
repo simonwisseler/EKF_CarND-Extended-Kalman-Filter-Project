@@ -1,5 +1,5 @@
 -----
-This repo contains a simple implementation of the Extended Kalman Filter algorithm for state estimation built on Udacity's Self-Driving Car Nanodegree Extended-Kalman-Filter Project.
+This repo contains a simple implementation of the Extended Kalman Filter algorithm for estimating the state of a moving object. It is built on Udacity's Self-Driving Car Nanodegree Extended-Kalman-Filter Project.
 
 The description below comes from the original repo (https://github.com/udacity/CarND-Extended-Kalman-Filter-Project.git).
 
